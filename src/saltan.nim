@@ -66,9 +66,7 @@ if existsFile "periodic.json":
   string_elements = readFile("periodic.json")
 else:
   # echo "Fetching elements.json ..."
-#   string_elements = client.getContent("""https://raw.githubusercontent.com
-# /Bowserinator/Periodic-Table-JSON/master/PeriodicTableJSON.json""")
-  quit "The file is unavailible and this program should be fixed to handle that"
+  string_elements = client.getContent("https://websalt.github.io/saltan/periodic.json")
 
 # Parse the json data
 let data = parseJson(string_elements)
