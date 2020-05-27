@@ -1,22 +1,18 @@
 saltan: clean
 	nimble build -d:ssl
 
-js: clean
-	nim js -d:ssl src/jsaltan.nim
-
 release: clean
 	nimble build -d:release -d:ssl
 
+js: clean
+	nim js -d:ssl -o=jsaltan.js src/jsaltan.nim 
+
 jsrelease: clean
-	nim js -d:ssl -d:release src/jsaltan.nim
+	nim js -d:ssl -o=jsaltan.js -d:release src/jsaltan.nim
 
-all: clean
-	nimble build -d:ssl
-	nim js -d:ssl src/jsaltan.nim
+all: clean saltan js
 
-allrelease: clean
-	nimble build -d:release -d:ssl
-	nim js -d:ssl -d:release src/jsaltan.nim
+allrelease: clean release jsrelease
 
 clean:
 	rm -f saltan src/saltan src/jsaltan.js jsaltan.js
