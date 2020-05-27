@@ -1,0 +1,147 @@
+[
+	{
+		"name"   : "Acetate",
+		"symbol": "C2H3O2",
+		"charge" : -1
+	},
+	{
+		"name"   : "Bromate",
+		"symbol": "BrO3",
+		"charge" : -1
+	},
+	{
+		"name"   : "Chlorate",
+		"symbol": "ClO3",
+		"charge" : -1
+	},
+	{
+		"name"   : "Cyanide",
+		"symbol": "CN",
+		"charge" : -1
+	},
+	{
+		"name"   : "Hydrogen Carbonate",
+		"symbol": "HCO3",
+		"charge" : -1
+	},
+	{
+		"name"   : "Hydrogen Sulfate",
+		"symbol": "HSO4",
+		"charge" : -1
+	},
+	{
+		"name"   : "Hydrogen Sulfite",
+		"symbol": "HSO3",
+		"charge" : -1
+	},
+	{
+		"name"   : "Chlorite",
+		"symbol": "ClO2",
+		"charge" : -1
+	},
+	{
+		"name"   : "Hydroxide",
+		"symbol": "OH",
+		"charge" : -1
+	},
+	{
+		"name"   : "Hypochlorite",
+		"symbol": "ClO",
+		"charge" : -1
+	},
+	{
+		"name"   : "Iodate",
+		"symbol": "IO3",
+		"charge" : -1
+	},
+	{
+		"name"   : "Nitrate",
+		"symbol": "NO3",
+		"charge" : -1
+	},
+	{
+		"name"   : "Nitrite",
+		"symbol": "NO2",
+		"charge" : -1
+	},
+	{
+		"name"   : "Perchlorate",
+		"symbol": "ClO4",
+		"charge" : -1
+	},
+	{
+		"name"   : "Permanganate",
+		"symbol": "MnO4",
+		"charge" : -1
+	},
+	{
+		"name"   : "Thiocyanate",
+		"symbol": "SCN",
+		"charge" : -1
+	},
+	{
+		"name"   : "Carbonate",
+		"symbol": "CO3",
+		"charge" : -2
+	},
+	{
+		"name"   : "Chromate",
+		"symbol": "CrO4",
+		"charge" : -2
+	},
+	{
+		"name"   : "Dichromate",
+		"symbol": "Cr2O7",
+		"charge" : -2
+	},
+	{
+		"name"   : "Oxalate",
+		"symbol": "C2O4",
+		"charge" : -2
+	},
+	{
+		"name"   : "Silicate",
+		"symbol": "SiO3",
+		"charge" : -2
+	},
+	{
+		"name"   : "Sulfate",
+		"symbol": "SO4",
+		"charge" : -2
+	},
+	{
+		"name"   : "Sulfite",
+		"symbol": "SO3",
+		"charge" : -2
+	},
+	{
+		"name"   : "Hydrogen Phosphate",
+		"symbol": "HPO4",
+		"charge" : -2
+	},
+	{
+		"name"   : "Arsenate",
+		"symbol": "AsO4",
+		"charge" : -3
+	},
+	{
+		"name"   : "Borate",
+		"symbol": "BO3",
+		"charge" : -3
+	},
+	{
+		"name"   : "Phosphate",
+		"symbol": "PO4",
+		"charge" : -3
+	},
+	{
+		"name"   : "Phosphite",
+		"symbol": "PO3",
+		"charge" : -3
+	},
+	{
+		"name"   : "Ammonium",
+		"symbol": "NH4",
+		"charge" : 1
+	}
+]
