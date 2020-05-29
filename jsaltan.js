@@ -2401,7 +2401,7 @@ function makeRequest(url_210185) {
 }
 
 function onLoad() {
-		makeRequest("periodic.json");
+		makeRequest("periodic-compressed.json");
 
 	
 }

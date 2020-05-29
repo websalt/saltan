@@ -8,3 +8,4 @@ polyions=$(cat polyions.json)
 
 echo "$elements" "$polyions" | jq -s '.[0].polyatomics=.[1]|.[0]' > periodic.json
 # echo "$elements" "$polyions" | jq -s '.[0].polyatomics=.[1]|.[0]'
+cat periodic.json | jq -c '' > periodic-compressed.json
