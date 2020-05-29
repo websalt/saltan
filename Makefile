@@ -12,9 +12,9 @@ jsrelease: cleanjs
 	closure-compiler --js jsaltan.js --js_output_file \
 	jsaltan-compiled.js --compilation_level=SIMPLE_OPTIMIZATIONS
 
-all: clean saltan js
+all: saltan js
 
-allrelease: clean release jsrelease
+allrelease: release jsrelease
 
 clean: cleancl cleanjs
 
