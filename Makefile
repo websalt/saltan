@@ -17,4 +17,4 @@ all: clean saltan js
 allrelease: clean release jsrelease
 
 clean:
-	rm -f saltan jsaltan.js jsaltan-compiled.js
+	rm -f bin/saltan jsaltan.js jsaltan-compiled.js
