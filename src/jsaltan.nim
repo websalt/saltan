@@ -143,11 +143,9 @@ proc makeRequest(url:cstring) {.exportc.} =
   httpRequest.send();
 
 proc onLoad() {.exportc.} =
-  # makeRequest("http://penguin.linux.test:8000/periodic.json")
   # makeRequest("periodic.json")
   makeRequest("periodic-compressed.json")
 
 proc doFormStuff() {.exportc.} =
   let phrase = $(document.getElementById("phrase").value)
   setItem("phrase", phrase)
-  window.location.reload()

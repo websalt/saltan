@@ -2409,7 +2409,6 @@ function onLoad() {
 function doFormStuff() {
 		var phrase_210378 = cstrToNimstr(document.getElementById("phrase").value);
 		localStorage.setItem("phrase", toJSStr(phrase_210378));
-		window.location.reload();
 
 	
 }
