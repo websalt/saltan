@@ -2,7 +2,7 @@
 
 version       = "0.1.0"
 author        = "websalt"
-description   = "A new awesome nimble package"
+description   = "A package for calculating salt anagrams"
 license       = "GPL-2.0"
 srcDir        = "src"
 binDir        = "bin"
