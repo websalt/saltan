@@ -5,11 +5,13 @@ Calculate salt anagrams
 ### Installing Saltan
 1. Run `make release`
 ### Installing JSaltan
-1. Run `nimble install ajax`
-2. Run `make jsrelease`
+1. Install the Closure Compiler
+2. Run `nimble install ajax`
+3. Run `make jsrelease`
 ## Installing Both
-1. Run `nimble install ajax`
-2. Run `make allrelease`
+1. Install the Closure Compiler
+2. Run `nimble install ajax`
+3. Run `make allrelease`
 ## Usage:
 ### Saltan
 `saltan [word]`
