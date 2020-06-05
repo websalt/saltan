@@ -10,7 +10,8 @@ js: cleanjs
 jsrelease: cleanjs
 	nim js -d:ssl -o=jsaltan.js -d:release src/jsaltan.nim
 	closure-compiler --js jsaltan.js --js_output_file \
-	jsaltan-compiled.js --compilation_level=SIMPLE_OPTIMIZATIONS
+	jsaltan-compiled.js --compilation_level=SIMPLE_OPTIMIZATIONS \
+	--warning_level QUIET
 
 all: saltan js
 
