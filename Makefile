@@ -4,9 +4,9 @@ saltan: cleancl
 release: cleancl
 	nimble build -d:release -d:ssl
 
-# Without any checks or ssl support
+# Maximum speed
 danger: cleancl
-	nimble build -d:danger
+	nimble build -d:danger --passc:-flto
 
 js: cleanjs
 	nim js -d:ssl -o=jsaltan.js src/jsaltan.nim 
