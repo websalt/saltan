@@ -12,3 +12,8 @@ footer, html {
     font-size: 3vh;
     text-align: center;
 }
+
+/* The color of links */
+a:link, a:visited, a:focus, a:hover, a:active {
+    color: #000000
+}
