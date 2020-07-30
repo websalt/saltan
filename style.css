@@ -1,16 +1,18 @@
-/* The main page */
-body, html {
+/* General */
+html {
     background-color: #D8DBE2;
     font-family: Verdana, sans-serif;
-    font-size: 4vh;
     text-align: center;
 }
 
+/* The main page */
+body {
+    font-size: 4vh;
+}
+
 /* The link at the bottom */
-footer, html {
-    font-family: Verdana, sans-serif;
+footer {
     font-size: 3vh;
-    text-align: center;
 }
 
 /* The color of links */
