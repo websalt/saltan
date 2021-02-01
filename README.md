@@ -1,9 +1,9 @@
-# saltan
+# Saltan
 Calculate salt anagrams
 ## Installation
 1. Install nim
 2. Run `make release`
-## Usage:
+## Usage
 ### Saltan
 `saltan [word]`
 ### JSaltan
