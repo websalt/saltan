@@ -2,16 +2,7 @@
 Calculate salt anagrams
 ## Installation
 1. Install nim
-### Installing Saltan
-1. Run `make release`
-### Installing JSaltan
-1. Install the Closure Compiler
-2. Run `nimble install ajax`
-3. Run `make jsrelease`
-## Installing Both
-1. Install the Closure Compiler
-2. Run `nimble install ajax`
-3. Run `make allrelease`
+2. Run `make release`
 ## Usage:
 ### Saltan
 `saltan [word]`
