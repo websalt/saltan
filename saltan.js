@@ -1,11 +1,11 @@
 function metalStatus(element) {
     if (element['category'].includes('metalloid')
         || element['category'].includes('nonmetal')) {
-        return 'non-metal';
+        return false;
     } else if (element['category'].includes('noble gas')) {
-        return 'noble gas';
+        return undefined;
     } else {
-        return 'metal';
+        return true;
     }
 }
 
@@ -33,9 +33,9 @@ function categorize(data) {
     for (i = 0; i < data['elements'].length; i++)  {
         let element = data['elements'][i];
         let elem_status = metalStatus(element);
-        if (elem_status == 'metal') {
+        if (elem_status) {
             categorized.metals.push(element);
-        } else if (elem_status == 'non-metal') {
+        } else if (elem_status === false) {
             categorized.nonmetals.push(element);
         }
     }
@@ -60,7 +60,7 @@ function main(data, phrase) {
         phrase = (window.location.hash.slice(1) || 'Salt');
     }
 
-    let sorted_phrase = sortString(phrase.toLowerCase())
+    let sorted_phrase = sortString(phrase.toLowerCase().replace(/[^a-z]/g, ''))
     let categorized = categorize(data);
 
     var content = phrase + "\n";
