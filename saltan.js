@@ -9,6 +9,23 @@ function metalStatus(element) {
     }
 }
 
+async function fetchData() {
+    let elements = fetch(
+        'https://api.github.com/repos/Bowserinator/Periodic-Table-JSON/contents/PeriodicTableJSON.json'
+    ).then(function(data) {return data.json()}).then(
+        function(data) {
+            return JSON.parse(atob(data['content']))['elements']});
+
+    let polyatomic_ions = fetch(
+        'https://api.github.com/repos/websalt/saltan/contents/polyatomic_ions.json'
+    ).then(function(data) {return data.json()}).then(
+        function(data) {
+            return JSON.parse(atob(data['content']))});
+
+    return {"elements": await elements,
+            "polyatomic_ions": await polyatomic_ions};
+}
+
 function getSymbol(node) {
     return node['symbol'].toLowerCase().replace(/[0-9]/,'');
 }
@@ -40,8 +57,8 @@ function categorize(data) {
         }
     }
 
-    for (i = 0; i < data['polyatomics'].length; i++) {
-        let ion = data['polyatomics'][i];
+    for (i = 0; i < data['polyatomic_ions'].length; i++) {
+        let ion = data['polyatomic_ions'][i];
         if (ion['charge'] > 0) {
             categorized.metals.push(ion);
         } else {
@@ -99,8 +116,7 @@ async function onLoad() {
     if (data) {
         data = JSON.parse(data);
     } else {
-        data = await fetch('periodic-compressed.json').then(
-            function(response) {return response.json()});
+        data = await fetchData();
         localStorage.setItem('data', JSON.stringify(data));
     }
     document.getElementById('phrase').addEventListener('keypress',
