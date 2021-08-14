@@ -27,7 +27,7 @@ async function fetchData() {
 }
 
 function getSymbol(node) {
-    return node['symbol'].toLowerCase().replace(/[0-9]/,'');
+    return node['symbol'].toLowerCase().replace(/[^a-z]/g,'');
 }
 
 function print(content) {
