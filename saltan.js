@@ -69,40 +69,52 @@ function categorize(data) {
 }
 
 function countChars(str) {
-    var charcounts = {};
+    var charcounts = Array(26).fill(0);
     for (i = 0; i < str.length; i++) {
-        let c = str[i]
-        charcounts[c] ? charcounts[c] += 1 : charcounts[c] = 1;
+      charcounts[str.charCodeAt(i) - 97] += 1;
     }
     return charcounts;
 }
 
 function isAnagram(cc1, cc2) {
-  cc1Keys = Object.keys(cc1);
-  cc2Keys = Object.keys(cc2);
-  if (cc1Keys.length != cc2Keys.length) {
-    return false;
-  }
-  for (i = 0; i < cc1Keys.length; i++) {
-    let key = cc1Keys[i]
-    if (cc1[key] != cc2[key]) {
+    if (cc1.length != cc2.length) {
       return false;
     }
-  }
-  return true;
+    for (i = 0; i < cc1.length; i++) {
+      if (cc1[i] != cc2[i]) {
+        return false;
+      }
+    }
+    return true;
 }
 
 function prepare(categorized) {
-    return Object.values(categorized.metals).map(function(metal) {
-        return Object.values(categorized.nonmetals).map(function(nonmetal) {
-            const charcounts = countChars(getSymbol(metal) + getSymbol(nonmetal))
+    const metalCharCounts = Object.values(categorized.metals).map(function(metal) {
+        return {
+            name: metal.name,
+            charcounts: countChars(getSymbol(metal))
+        }
+    });
+    const nonmetalCharCounts = Object.values(categorized.nonmetals).map(function(nonmetal) {
+        return {
+            name: nonmetal.name,
+            charcounts: countChars(getSymbol(nonmetal))
+        }
+    });
+
+    return metalCharCounts.map(function(metal) {
+        return nonmetalCharCounts.map(function(nonmetal) {
             return {
-                charcounts: charcounts,
                 metal: metal.name,
-                nonmetal: nonmetal.name
+                nonmetal: nonmetal.name,
+                charcounts: addCharCounts(metal.charcounts, nonmetal.charcounts)
             }
         })
     }).flat();
+}
+
+function addCharCounts(cc1, cc2) {
+    return cc1.map((c,i)=>c+cc2[i]);
 }
 
 function saltAnagrams(cc, prepared) {
