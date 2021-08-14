@@ -77,9 +77,6 @@ function countChars(str) {
 }
 
 function isAnagram(cc1, cc2) {
-    if (cc1.length != cc2.length) {
-      return false;
-    }
     for (i = 0; i < cc1.length; i++) {
       if (cc1[i] != cc2[i]) {
         return false;
