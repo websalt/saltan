@@ -153,7 +153,7 @@ function keyHandler(k) {
     }
 }
 
-async function onLoad() {
+window.onload = async function() {
     window.categorized = localStorage.getItem('categorized');
     window.prepared = localStorage.getItem('prepared');
 
