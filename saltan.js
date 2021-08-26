@@ -140,7 +140,7 @@ function main(categorized, prepared, phrase) {
     })
 
     if (!has_salt) {
-        content += "No salts were found";
+        content += 'No matching salts';
     }
     print(content);
 }
