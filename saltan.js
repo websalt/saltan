@@ -145,14 +145,6 @@ function main(categorized, prepared, phrase) {
     print(content);
 }
 
-function keyHandler(k) {
-    if (k.key == 'Enter') {
-        var input = document.getElementById('phrase');
-        main(categorized, prepared, input.value);
-        input.value = '';
-    }
-}
-
 window.onload = async function() {
     window.categorized = localStorage.getItem('categorized');
     window.prepared = localStorage.getItem('prepared');
@@ -172,7 +164,10 @@ window.onload = async function() {
         window.prepared = prepare(categorized);
         localStorage.setItem('prepared', JSON.stringify(window.prepared));
     }
-    document.getElementById('phrase').addEventListener('keypress',
-                                                       keyHandler);
+
+    document.getElementById('phrase').addEventListener('input', function() {
+        main(categorized, prepared, document.getElementById('phrase').value);
+    });
+
     main(categorized, prepared);
 }
