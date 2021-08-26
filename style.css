@@ -20,7 +20,8 @@ a:link, a:visited, a:focus, a:hover, a:active {
     color: #000000
 }
 
-input {
-    width: 15%;
-    height: 3vh;
+/* The input box */
+#phrase {
+    height: 4vh;
+    font-size: 3vh;
 }
