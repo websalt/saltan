@@ -30,10 +30,6 @@ function getSymbol(node) {
     return node['symbol'].toLowerCase().replace(/[^a-z]/g,'');
 }
 
-function print(content) {
-    document.getElementById('main').innerText = content;
-}
-
 function prettyPresent(node) {
     const prettified = node['symbol'] + ' ' + node['name'];
     if (node['number']) {
@@ -142,10 +138,11 @@ function main(categorized, prepared, phrase) {
     if (!has_salt) {
         content += 'No matching salts';
     }
-    print(content);
+    document.getElementById('main').innerText = content;
 }
 
 window.onload = async function() {
+    document.getElementById('main').innerText = 'Loading...';
     window.categorized = localStorage.getItem('categorized');
     window.prepared = localStorage.getItem('prepared');
 
